@@ -22,3 +22,7 @@ jobs:
 
       - name: List files
         run: ls -la
+
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
