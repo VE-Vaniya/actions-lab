@@ -1,0 +1,23 @@
+name: Hello Actions
+on:
+push:
+workflow_dispatch:
+jobs:
+hello:
+runs-on: ubuntu-latest
+steps:
+- name: Say hello
+run: echo &quot;Hello from GitHub Actions!&quot;
+- name: Show context
+run: |
+echo &quot;Actor: ${{ github.actor }}&quot;
+echo &quot;Event: ${{ github.event_name }}&quot;
+
+Page 9 of 22
+
+echo &quot;Repository: ${{ github.repository }}&quot;
+echo &quot;Ref: ${{ github.ref }}&quot;
+echo &quot;Commit: ${{ github.sha }}&quot;
+echo &quot;Runner OS: ${{ runner.os }}&quot;
+- name: List files
+run: ls -la
